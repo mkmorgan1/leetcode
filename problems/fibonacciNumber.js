@@ -29,12 +29,12 @@ Constraints:
 0 <= n <= 30
 */
 
-var fib = function(n) {
+var fib = function (n) {
   if (n === 0) return 0;
-  let fibonacci = [0,1];
+  let fibonacci = [0, 1];
   for (let i = 2; i <= n; i++) {
-      fibonacci.push(fibonacci[0] + fibonacci[1]);
-      fibonacci.shift();
+    fibonacci.push(fibonacci[0] + fibonacci[1]);
+    fibonacci.shift();
   }
   return fibonacci[1];
 };

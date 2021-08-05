@@ -38,12 +38,12 @@ Follow up: Can you solve it using O(1) (i.e. constant) memory?
 
 */
 
-var hasCycle = function(head) {
+var hasCycle = function (head) {
   const map = new Map();
-  while(head) {
-      if (map.has(head)) return true;
-      map.set(head)
-      head = head.next;
+  while (head) {
+    if (map.has(head)) return true;
+    map.set(head);
+    head = head.next;
   }
-  return false
+  return false;
 };

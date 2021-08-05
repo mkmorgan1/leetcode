@@ -37,20 +37,18 @@ Constraints:
 //   return fib[n+1]
 // };
 
-
-var climbStairs = function(n) {
-  let count = 0
+var climbStairs = function (n) {
+  let count = 0;
   const climb = (num) => {
-      if (num === 0) {
-          count++
-          return;
-      }
-      if (num - 2 >= 0) climb(num-2)
-      climb(num-1);
-  }
-  climb(n)
-  return count
-
+    if (num === 0) {
+      count++;
+      return;
+    }
+    if (num - 2 >= 0) climb(num - 2);
+    climb(num - 1);
+  };
+  climb(n);
+  return count;
 };
 
 console.log(climbStairs(1));

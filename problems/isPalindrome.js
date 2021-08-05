@@ -21,20 +21,20 @@ Constraints:
 s consists only of printable ASCII characters.
 */
 
-var isPalindrome = function(s) {
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz0123456789';
-  const alphabetHolder ={}
+var isPalindrome = function (s) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyz0123456789";
+  const alphabetHolder = {};
   for (let i = 0; i < alphabet.length; i++) {
-      alphabetHolder[alphabet[i]] = true;
+    alphabetHolder[alphabet[i]] = true;
   }
-  s = s.split(' ').join('');
+  s = s.split(" ").join("");
   stringHolder = [];
   for (let i = 0; i < s.length; i++) {
-      const letter = s[i].toLowerCase();
-      if (alphabetHolder[letter]) stringHolder.push(letter);
+    const letter = s[i].toLowerCase();
+    if (alphabetHolder[letter]) stringHolder.push(letter);
   }
-  const string = stringHolder.join('');
-  const reversed = stringHolder.reverse().join('');
+  const string = stringHolder.join("");
+  const reversed = stringHolder.reverse().join("");
 
   if (string !== reversed) return false;
   return true;
